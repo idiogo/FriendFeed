@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<FBLoginViewDelegate>
+
+@property (strong, nonatomic) IBOutlet FBLoginView *loginView;
+
+@property BOOL propositalCall;
+
+- (IBAction)dismiss:(id)sender;
 
 @end
